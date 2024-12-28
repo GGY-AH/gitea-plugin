@@ -33,7 +33,7 @@
         <changelist>999999-SNAPSHOT</changelist>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <argLine>-Dfile.encoding=${project.build.sourceEncoding}</argLine>
-        <jenkins.version>2.426.3</jenkins.version>
+        <jenkins.version>2.479.1</jenkins.version>
         <spotbugs.effort>Max</spotbugs.effort>
         <spotbugs.failOnError>true</spotbugs.failOnError>
         <spotbugs.threshold>Medium</spotbugs.threshold>
@@ -43,8 +43,8 @@
         <dependencies>
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
-                <artifactId>bom-2.426.x</artifactId>
-                <version>3208.vb_21177d4b_cd9</version>
+                <artifactId>bom-2.479.x</artifactId>
+                <version>3482.vc10d4f6da_28a_</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -72,6 +72,7 @@
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>scm-api</artifactId>
+            <version>999999-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>

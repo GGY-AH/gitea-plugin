@@ -501,7 +501,11 @@ public class GiteaSCMSource extends AbstractGitSCMSource {
             }
         }
         List<Action> result = new ArrayList<>();
-        result.add(new ObjectMetadataAction(giteaRepository.getName(), giteaRepository.getDescription(), giteaRepository.getWebsite()));
+        // [JENKINS-73226] Add a HTML formatted description
+        final String htmlFormattedDescription =
+                Jenkins.get().getMarkupFormatter().translate(giteaRepository.getDescription());
+        result.add(new ObjectMetadataAction(giteaRepository.getName(), giteaRepository.getDescription(),
+                giteaRepository.getWebsite(), htmlFormattedDescription));
         if (StringUtils.isNotBlank(giteaRepository.getAvatarUrl())) {
             result.add(new GiteaAvatar(giteaRepository.getAvatarUrl()));
         }
